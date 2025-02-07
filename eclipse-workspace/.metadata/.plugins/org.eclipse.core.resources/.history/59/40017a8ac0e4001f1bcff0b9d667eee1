@@ -1,0 +1,40 @@
+package com.selenium.test_facebook;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestFb {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.facebook.com");
+		
+		driver.getTitle();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+
+        WebElement userName = driver.findElement(By.name("email"));
+        WebElement passwd = driver.findElement(By.name("pass"));
+        WebElement logButton = driver.findElement(By.name("login"));
+        
+        userName.sendKeys("mandar_bedekar2007@outlook.com");
+        passwd.sendKeys("241369AK!");
+        logButton.click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+
+        WebElement message = driver.findElement(By.id("message"));
+        message.getText();
+
+        driver.quit();
+
+	}
+
+}

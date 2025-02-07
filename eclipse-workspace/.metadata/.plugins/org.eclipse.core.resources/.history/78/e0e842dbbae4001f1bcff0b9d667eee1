@@ -1,0 +1,10 @@
+package com.selenium.test_facebook;
+
+public class TestFb {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
