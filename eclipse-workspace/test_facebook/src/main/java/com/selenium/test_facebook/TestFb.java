@@ -35,13 +35,17 @@ public class TestFb {
         
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
 
-        WebElement message = driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div/div/div[2]/div/div/div[1]/div/div/div/div/div/div/div/div/div"));
+        WebElement message = driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div/div/div[2]/div/div/div[1]/div/div/div/div/div/div/div/div/div/div/div[1]/div/div[1]/span"));
         
-        File src = message.getScreenshotAs(OutputType.FILE);
-        File dest = new File("C:\\Data\\VisibleOfElementScreenShotAs.png");
-        FileHandler.copy(src, dest);
+        System.out.println(message.getText());
         
-        driver.close();
+        
+
+        //File src = message.getScreenshotAs(OutputType.FILE);
+        //File dest = new File("C:\\Data\\VisibleOfElementScreenShotAs.png");
+        //FileHandler.copy(src, dest);
+        
+        //driver.close();
 
 	}
 
